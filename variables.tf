@@ -1,4 +1,11 @@
 
+variable "region" {
+  default = "us-east-1"
+}
+variable "environment" {
+  default = "Development"
+}
+
 ## VPC CIDR Block ##
 
 variable "vpc_cidr" {
@@ -59,7 +66,7 @@ variable "private-database-subnet-2-cidr" {
 ## DB Instance    ##
 
 variable "database-instance-class" {
-  default     = "db.t3.micro"
+  default     = "db.t3.medium"
   description = "The Database Instance type"
   type        = string
 }
